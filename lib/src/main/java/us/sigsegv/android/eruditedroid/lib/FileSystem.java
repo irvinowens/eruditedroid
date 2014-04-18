@@ -14,8 +14,15 @@ import java.io.IOException;
  * just for good measure ( and security ) Erudite can only exist on the system's main filesystem
  * it will not allow itself to be located on the extSdCard or the sdCard mount points.
  *
- * The filesystem will create files based on the most significant 5 hex values in the hash
- * result.
+ * The filesystem will create files based on the most significant bit will refer to the server,
+ * unused in this implementation, the next 5 hex values in the hash will point to the file
+ * result.  The row will be allowed to have 64kb, with the last bit indicating the next file to read.
+ * Staying under 64kb for rows will prove to have an advantage, if it goes over, the next file
+ * will be labelled with the hash key followed by the bit index 0, 1, 2, etc... up through 7.
+ * Therefore the largest row will be 576kb.  Did I say this was a text database ;-p.
+ *
+ * If you need more content, you should shard your data into multiple rows.  This will keep
+ * the database responsive.
  *
  * Created by 0x8badbeef<0x8badbeef@sigsegv.us> on 4/17/2014.
  */
