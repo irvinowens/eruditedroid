@@ -7,7 +7,9 @@ import java.util.concurrent.Executors;
 
 /**
  * Erudite is a mobile version of the NoSQL database
- * It is intended to be used for storing moderate amounts of data
+ * It is intended to be a fully featured NoSQL database utilizing pattern matching
+ * as its method of query.
+ *
  * Created by 0x8badbeef<0x8badbeef@sigsegv.us> on 4/17/2014.
  */
 public class Erudite {

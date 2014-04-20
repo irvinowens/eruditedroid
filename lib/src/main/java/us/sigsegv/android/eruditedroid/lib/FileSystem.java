@@ -24,6 +24,10 @@ import java.io.IOException;
  * If you need more content, you should shard your data into multiple rows.  This will keep
  * the database responsive.
  *
+ * When dealing with the journal, it will work as expected, from the oldest entry to the most
+ * recent.  In a perfect situation, the database will have minimal lag between commit and the
+ * data actually being present in the db file.  When busy, the journal will grow and grow.
+ *
  * Created by 0x8badbeef<0x8badbeef@sigsegv.us> on 4/17/2014.
  */
 public class FileSystem {
