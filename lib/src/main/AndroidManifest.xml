@@ -1,11 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="us.sigsegv.android.eruditedroid.lib">
+    package="us.sigsegv.android.eruditedroid.lib" >
 
-    <application android:allowBackup="true"
-        android:label="@string/app_name"
+    <application
+        android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
->
-
+        android:label="@string/app_name" >
+        <service
+            android:name="us.sigsegv.android.eruditedroid.lib.EruditeService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
     </application>
 
 </manifest>
